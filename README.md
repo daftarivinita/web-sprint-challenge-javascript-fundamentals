@@ -28,7 +28,7 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
-
+.forEach doesnot create a new array. and .map creates a new array
 2. Explain the difference between a callback and a higher order function.
 
 3. Can you explain what a closure is and how you used it in the counter function? 
