@@ -29,13 +29,28 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+Both are Higher order functions.`.forEach` doesnot return a new array and must iterate through every item in a array without stopping. and `.map` returns a new array and doesnot manipulate original data. 
+
+
 2. Explain the difference between a callback and a higher order function.
+
+Higher order function recieves. It takes another function as parameter. A callback function are passed in. They are passed in higher order functions as arguments.
 
 3. Can you explain what a closure is and how you used it in the counter function? 
 
+when a function reaches outside of it's scope to grab a value that was defined in the parent scope  is closure. 
+we can pass things down but not back up 
+
+
 4. Describe the four principles of the 'this' keyword.
+    1. Global Binding- not a good practice. Value of this will be window/console object. When in strict mode it will say undefined.
+    2. Implicit Binding- It applies to object with methods. It is used in 80% of use cases.
+    3. New Binding - whenever a constructor function is used "this" refer to specific instance of object created.
+    4. Explicit Binding - whenever javascript call/apply/bind methods are used "this" is explicitly defined.
 
 5. Why do we need super() in an extended class?
+
+super tells the child to inherit methods from parent. super do what Object.create did in protoypes.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
