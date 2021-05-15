@@ -28,8 +28,10 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
+  // creating a variable sum to return the summation of that number.
+  // using a for loop
 function summation(n) {
-  let sum = 0;
+  let sum = 0; 
   for(let i = 0; i <= n; i++) {
    sum += i;
   }
@@ -61,14 +63,13 @@ const zooAnimals = [
   */
 
   function animalNames(arr){
-    const displayNames = [];
+    //creating a new empty array to push animal and scientific name.
+    const displayNames = []; 
     arr.forEach((item)=> {
       displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`)
-        
-    });
+        });
 return displayNames;
-    
-  }
+}
 console.log(animalNames(zooAnimals));
   
 
@@ -79,8 +80,10 @@ console.log(animalNames(zooAnimals));
   */
 
   function lowerCaseNames(arr){
-    const newArray = arr.map((item)=> {
-      return item.animal_name.toLowerCase();
+    //use of .map to just return animal name
+    // toLowercase() function converts all names in lowercase.
+    const newArray = arr.map((item)=> { 
+      return item.animal_name.toLowerCase(); 
     });
     return newArray;
   }
@@ -93,8 +96,9 @@ console.log(animalNames(zooAnimals));
   */
 
   function lowPopulationAnimals(arr){
-    const lessPop = arr.filter((pop) => pop.population < 5)
-      return lessPop;
+    //population who meets condition will be added and population who does not meet condition will be excluded.
+    const lessPop = arr.filter((pop) => pop.population < 5) 
+    return lessPop;
   }
   console.log(lowPopulationAnimals(zooAnimals));
   
@@ -106,9 +110,11 @@ console.log(animalNames(zooAnimals));
   */
 
   function USApop(arr) {
+    //we use .map function to just sort population out of zooAnimals array.
     const pop = arr.map((item)=>{
       return item.population
     })
+    //we use reduce function on pop array to find total of population.
     const totalPop = pop.reduce((acc, currentValue) => {
         return acc + currentValue;
     }, 0);
@@ -178,6 +184,7 @@ function CuboidMaker(attrb){
 /* 🐴🐴🐴 Step 2: Volume Method 🐴🐴🐴
   Create a method called volume using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   Formula for cuboid volume: length * width * height   */
+  
   CuboidMaker.prototype.volume = function() {
     return this.length * this.width * this.height;
   }
